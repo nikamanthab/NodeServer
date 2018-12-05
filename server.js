@@ -27,15 +27,22 @@ app.use((req,res,next)=>{
 
 
 app.get('/',(request,response)=>{
-	response.send({
-		key:"nitin",
-		password:"nitin321"
+	response.render('home.hbs',{
+		title: "About nitin",
+		// year: new Date().getFullYear(),
 	});
 });
 
 app.get('/about',(request,response)=>{
 	response.render('about.hbs',{
 		title: "About nitin",
+		// year: new Date().getFullYear(),
+	});
+})
+
+app.get('/projects',(request,response)=>{
+	response.render('projects.hbs',{
+		title: "Projects",
 		// year: new Date().getFullYear(),
 	});
 })
